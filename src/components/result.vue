@@ -7,12 +7,12 @@
     <canvas id="canvas"></canvas>
 
 
-    <img src="../assets/image/saveText.png" alt="" class="saveText">
+    <img src="http://img.wecarepet.com/double11/saveText.png" alt="" class="saveText">
     <div class="btnWrap">
-      <img src="../assets/image/againBtn.png" alt="" class="againBtn" @click="goHome">
-      <img src="../assets/image/shareBtn.png" alt="" class="shareBtn" @click="showShareHandle">
+      <img src="http://img.wecarepet.com/double11/againBtn.png" alt="" class="againBtn" @click="goHome">
+      <img src="http://img.wecarepet.com/double11/shareBtn.png" alt="" class="shareBtn" @click="showShareHandle">
     </div>
-    <img src="../assets/image/slogan.png" alt="" class="logo" @click="goMZYS">
+    <img src="http://img.wecarepet.com/double11/slogan.png" alt="" class="logo" @click="goMZYS">
     <div v-if="showShare" class="showShare" @click="closeShare">
       <img src="http://img.wecarepet.com/double11/shareTopnew.png" alt="" class="shareTop">
       <img v-if="browser == 'android'" src="http://img.wecarepet.com/double11/shareAndroidnew.png" alt="" class="shareBottom">

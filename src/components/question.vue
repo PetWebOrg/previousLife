@@ -8,11 +8,11 @@
         <div class="content"><div class="text">{{option.text}}</div></div>
       </div>
     </div>
-    <img src="../assets/image/catLeft.png"  alt="" class="catLeft">
-    <img src="../assets/image/heart.png"    alt="" class="heart">
-    <img src="../assets/image/hand.png"     alt="" class="hand">
-    <img src="../assets/image/logo.png"     alt="" class="logo">
-    <img src="../assets/image/catRight.png" alt="" class="catRight">
+    <img src="http://img.wecarepet.com/double11/catLeft.png"  alt="" class="catLeft">
+    <img src="http://img.wecarepet.com/double11/heart.png"    alt="" class="heart">
+    <img src="http://img.wecarepet.com/double11/hand.png"     alt="" class="hand">
+    <img src="http://img.wecarepet.com/double11/logo.png"     alt="" class="logo">
+    <img src="http://img.wecarepet.com/double11/catRight.png" alt="" class="catRight">
   </div>
 
 
@@ -165,7 +165,7 @@ export default {
         width:86%;
         @include aspect-ratio(313,45);
         text-align:center;
-        background:url('../assets/image/optionMini.png') no-repeat;
+        background:url('http://img.wecarepet.com/double11/optionMini.png') no-repeat;
         background-size:100% 100%;
         color: #FFF4E1;
         font-size:1rem;

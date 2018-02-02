@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
 import question from '@/components/question'
-import HelloWorld from '@/components/HelloWorld'
 import uploadImg from '@/components/uploadImg'
 import result from '@/components/result'
 import loading from '@/components/loading'
@@ -41,11 +40,6 @@ export default new Router({
       path: '/loading/',
       name: 'loading',
       component: loading
-    },
-    {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
     }
   ]
 })

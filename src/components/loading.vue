@@ -1,8 +1,12 @@
 <template>
   <div class="loading container">
-    <img src="../assets/image/loadingP0.png" alt="" class="progress">
-    <img src="../assets/image/loading.png" alt="" class="loadingText">
-    <img src="../assets/image/logo.png" alt="" class="logo">
+    <img src="http://img.wecarepet.com/double11/loadingP0.png" alt="" class="progress">
+    <img src="http://img.wecarepet.com/double11/loading.png" alt="" class="loadingText">
+    <img src="http://img.wecarepet.com/double11/logo.png" alt="" class="logo">
+
+    <!--<img src="../assets/image/loadingP0.png" alt="" class="progress">-->
+    <!--<img src="../assets/image/loading.png" alt="" class="loadingText">-->
+    <!--<img src="../assets/image/logo.png" alt="" class="logo">-->
   </div>
 
 </template>
@@ -46,7 +50,8 @@
       }
     },
     mounted(){
-      var src = './static/img/loadingP';
+//      var src = './static/img/loadingP';
+      var src = 'http://img.wecarepet.com/double11/loadingP';
       var count = 0;
       setInterval(function () {
         count++;
@@ -60,7 +65,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style  lang="scss" scoped>
   .loading{
-    background:url("../assets/image/loading_bg.png") no-repeat;
+    background:url("http://img.wecarepet.com/double11/loading_bg.png") no-repeat;
     background-size:100% 100%;
     background-color:#07427D;
     text-align: center;

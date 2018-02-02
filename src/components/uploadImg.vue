@@ -1,15 +1,15 @@
 <template>
   <div class="uploadImg">
     <div class="uploadImg1 container" v-show="!isEdit && !showLoad">
-      <img src="../assets/image/who.png"  alt="" class="who">
-      <img src="../assets/image/avatarBig.png"  alt="" class="avatarBig">
-      <img src="../assets/image/chooseImg.png"  alt="" class="chooseImg" @click="chooseImg(9)">
+      <img src="http://img.wecarepet.com/double11/who.png"  alt="" class="who">
+      <img src="http://img.wecarepet.com/double11/avatarBig.png"  alt="" class="avatarBig">
+      <img src="http://img.wecarepet.com/double11/chooseImg.png"  alt="" class="chooseImg" @click="chooseImg(9)">
 
-      <img src="../assets/image/catLeft.png"  alt="" class="catLeft">
-      <img src="../assets/image/heart.png"    alt="" class="heart">
-      <img src="../assets/image/hand.png"     alt="" class="hand">
-      <img src="../assets/image/logo.png"     alt="" class="logo">
-      <img src="../assets/image/catRight.png" alt="" class="catRight">
+      <img src="http://img.wecarepet.com/double11/catLeft.png"  alt="" class="catLeft">
+      <img src="http://img.wecarepet.com/double11/heart.png"    alt="" class="heart">
+      <img src="http://img.wecarepet.com/double11/hand.png"     alt="" class="hand">
+      <img src="http://img.wecarepet.com/double11/logo.png"     alt="" class="logo">
+      <img src="http://img.wecarepet.com/double11/catRight.png" alt="" class="catRight">
     </div>
     <div class="uploadImg2" v-show="isEdit && !showLoad" >
       <div id="needCropWrap" class="top">
@@ -18,16 +18,16 @@
         </div>
       </div>
       <div class="bottom">
-        <img src="../assets/image/avatarMini.png" alt="" class="avatarMini">
+        <img src="http://img.wecarepet.com/double11/avatarMini.png" alt="" class="avatarMini">
         <div class="preview">
           <div id="preview" class="content"></div>
         </div>
-        <img src="../assets/image/saveBtn.png" alt="" class="saveBtn" @click="cropping">
-        <img src="../assets/image/chooseAgain.png" alt="" class="chooseAgain"  @click="chooseImg(11)">
+        <img src="http://img.wecarepet.com/double11/saveBtn.png" alt="" class="saveBtn" @click="cropping">
+        <img src="http://img.wecarepet.com/double11/chooseAgain.png" alt="" class="chooseAgain"  @click="chooseImg(11)">
 
-        <img src="../assets/image/hand.png"     alt="" class="hand">
-        <img src="../assets/image/logo.png"     alt="" class="logo">
-        <img src="../assets/image/catRight.png" alt="" class="catRight">
+        <img src="http://img.wecarepet.com/double11/hand.png"     alt="" class="hand">
+        <img src="http://img.wecarepet.com/double11/logo.png"     alt="" class="logo">
+        <img src="http://img.wecarepet.com/double11/catRight.png" alt="" class="catRight">
       </div>
     </div>
     <loading-component v-show="showLoad"></loading-component>
@@ -111,14 +111,15 @@ export default {
     wxUploadImage: function (imageCount, imgs) {
       var that = this;
       if (imageCount > 0) {
-        wx.uploadImage({
-          localId: imgs[imgs.length - imageCount],
-          isShowProgressTips: 1,
-          success: function (res) {
-            var serverId = res.serverId;
-            console.log('serverId=');
-            console.log(serverId);
-            $.ajax({
+        setTimeout(function(){
+          wx.uploadImage({
+            localId: imgs[imgs.length - imageCount],
+            isShowProgressTips: 1,
+            success: function (res) {
+              var serverId = res.serverId;
+              console.log('serverId=');
+              console.log(serverId);
+              $.ajax({
                 url:"/data/downloadWxImage?serverId=" + serverId,
                 context:null,
                 success:function(res){
@@ -128,12 +129,13 @@ export default {
                 fail:function(){
                   alert("上传失败");
                 }
-            })
-          },
-          fail: function (err) {
-            console.log(err);
-          }
-        })
+              })
+            },
+            fail: function (err) {
+              console.log(err);
+            }
+          })
+        },300);
       }
     },
     onAddPhoto : function(img){

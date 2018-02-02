@@ -225,9 +225,16 @@ function updataShare(shareInfo) {
   if(typeof shareInfo == 'undefined'){
     shareInfo = {
       shareSrc:'http://img.wecarepet.com/double11/share0.jpg',
-      shareText:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十',
-      shareTitle:'走远科学之TA与你的前世今生一二三四五六七八九十一二三四五六七八九十',
-      shareDesc:'不得不低头的甲方爸爸？还是塑料姐妹花一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十？'
+      shareText:'你和TA的缘分，其实从上辈子就开始了……',
+      shareTitle:'你和TA的缘分，其实从上辈子就开始了……',
+      shareDesc:'TA上辈子和你是情敌？陌路？爱人？还是塑料姐妹花？快来测一发！'
+    }
+  }else{
+    shareInfo = {
+      shareSrc:shareInfo.shareSrc,
+      shareText:'你和TA的缘分，其实从上辈子就开始了……',
+      shareTitle:'原来TA上辈子跟我居然是这种关系……怪不得……',
+      shareDesc:'TA上辈子和你是情敌？陌路？爱人？还是塑料姐妹花？快来测一发！'
     }
   }
   var shareOrigin = 'http://wecarepet.com/H5GameH5Game/previousLife/index.html#/';
